@@ -46,7 +46,7 @@ class Generator:
                 coords = (round(loc["latitudeE7"] / 1e7, 6),
                            round(loc["longitudeE7"] / 1e7, 6))
 
-                if timestampInRange(loc["timestampMs"], date_range):
+                if timestampInRange(loc["timestamp"], date_range):
                     self.updateCoord(coords)
                 pb.update(i)
 
@@ -72,7 +72,7 @@ class Generator:
                 coords = (round(loc["latitudeE7"] / 1e7, 6),
                             round(loc["longitudeE7"] / 1e7, 6))
 
-                if timestampInRange(loc["timestampMs"], date_range):
+                if timestampInRange(loc["timestamp"], date_range):
                     self.updateCoord(coords)
                     
                 if i > max_value_est:
